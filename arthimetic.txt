@@ -1,0 +1,33 @@
+
+module tb();
+  reg [3:0]a,b;
+  reg [4:0]out1;
+  reg [4:0]out2;
+  reg [5:0]out3;
+  reg [4:0]out4;
+  reg [4:0]out5;
+  reg [5:0]out6;
+  
+  initial
+    begin
+      a=4'b1011;
+      b=4'b1100;
+      //additiom
+      out1=a+b;
+      //subtraction
+      out2=a-b;
+      //multiplication
+      out3=a*b;
+      //division
+      out4=a/b;
+      //modulus
+      out5=a%b;
+      //exponent/power
+      out6=a**b;
+    end
+  initial
+    begin
+      $monitor("a=%b,b=%b,out1=%b,out2=%b,out3=%b,out4=%b,out5=%b,out6=%b",a,b,out1,out2,out3,out4,out5,out6);
+    end
+endmodule
+
